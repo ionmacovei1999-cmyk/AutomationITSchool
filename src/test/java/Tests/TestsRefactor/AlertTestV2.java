@@ -1,4 +1,4 @@
-package TestsRefactor;
+package Tests.TestsRefactor;
 
 import Pages.AlertsPage;
 import Pages.CommonPage;

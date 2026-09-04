@@ -1,18 +1,26 @@
-package TestsRefactor;
+package Tests.TestsRefactor;
 
+import ObjectData.TextBoxObject;
 import Pages.CommonPage;
 import Pages.HomePage;
 import Pages.TextBoxPage;
 import Shared_Data.TestBasePage;
+import XmlReader.XmlDataLoader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
+import java.util.List;
+import java.util.Map;
+
 public class TestBoxTestV2 extends TestBasePage {
 
+    private List<TextBoxObject> textBoxObjectMap;
+
     @Test
-    public void metodaTest(){
+    public void metodaTest(TextBoxObject textBoxObject){
+
 
 //        ChromeOptions options = new ChromeOptions();
 //

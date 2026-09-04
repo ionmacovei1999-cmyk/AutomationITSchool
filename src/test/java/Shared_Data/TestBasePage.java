@@ -1,4 +1,5 @@
 package Shared_Data;
+import Shared_Data.Browser.BrowserFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,8 +11,9 @@ public class TestBasePage {
 
     @BeforeMethod
     public void initialiseBrowser() {
-        this.driver = new ChromeDriver();
-        driver.manage().window().maximize();
+//        this.driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+        driver = new BrowserFactory().getBrowserFactory();
         driver.get("https://demoqa.com/");
     }
 

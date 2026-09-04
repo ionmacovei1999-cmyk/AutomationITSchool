@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementsMetods;
+import ObjectData.WebTableObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -62,15 +63,15 @@ public class WebTablesPage {
     WebElement departmentColumn;
 
 
-    public void addEntry(String firstName,String lastName,String email,  String age,  String salary, String department)
+    public void addEntry(WebTableObject data)
     {
         clickOnAddButton();
-        enterFirstName(firstName);
-        enterLasttName(lastName);
-        enterUserEmail(email);
-        enterAge(age);
-        enterSalary(salary);
-        enterDepartment(department);
+        enterFirstName(data.getFirstName());
+        enterLasttName(data.getLastName());
+        enterUserEmail(data.getEmail());
+        enterAge(data.getAge());
+        enterSalary(data.getSalary());
+        enterDepartment(data.getDepartment());
         clickOnSubmitButton();
     }
 
@@ -114,14 +115,14 @@ public class WebTablesPage {
         elementsMetods.clickOnElement(submitButton);
     }
 
-    public void verifyEntry(String firstName,String lastName,String email,  String age,  String salary, String department)
+    public void verifyEntry(WebTableObject data)
     {
-        Assert.assertTrue(firstNametColumn.getText().equals(firstName));
-        Assert.assertTrue(lastNameColumn.getText().equals(lastName));
-        Assert.assertTrue(emailColumn.getText().equals(email),"E-mailul nu a fost corect");
-        Assert.assertTrue(ageColumn.getText().equals(age));
-        Assert.assertTrue(salaryColumn.getText().equals(salary));
-        Assert.assertTrue(departmentColumn.getText().equals(department));
+        Assert.assertTrue(firstNametColumn.getText().equals(data.getFirstName()));
+        Assert.assertTrue(lastNameColumn.getText().equals(data.getLastName()));
+        Assert.assertTrue(emailColumn.getText().equals(data.getEmail()),"E-mailul nu a fost corect");
+        Assert.assertTrue(ageColumn.getText().equals(data.getAge()));
+        Assert.assertTrue(salaryColumn.getText().equals(data.getSalary()));
+        Assert.assertTrue(departmentColumn.getText().equals(data.getDepartment()));
     }
 
 

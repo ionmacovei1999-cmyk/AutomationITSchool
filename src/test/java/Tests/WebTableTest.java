@@ -88,8 +88,8 @@ public class WebTableTest {
         webTablesPage.enterDepartment(department);
         webTablesPage.clickOnSubmitButton();*/
 
-        webTablesPage.addEntry(firstName, lastName, email, age, salary, department);
-        webTablesPage.addEntry("Miau", "Dom", "email@gmail.com", "1234", "10000", "department");
+//        webTablesPage.addEntry(firstName, lastName, email, age, salary, department);
+//        webTablesPage.addEntry("Miau", "Dom", "email@gmail.com", "1234", "10000", "department");
 
         WebElement rowAdded = driver.findElement(By.xpath("(//tr)[5]"));
         String rowAddedText = rowAdded.getText();
@@ -127,7 +127,7 @@ public class WebTableTest {
 //        Assert.assertTrue(departmentColumn.getText().equals(department));
 //        Assert.assertEquals(departmentColumn.getText(), department);
 
-        webTablesPage.verifyEntry(firstName,lastName,email,age,salary,department);
+        //webTablesPage.verifyEntry(firstName,lastName,email,age,salary,department);
 
 
 

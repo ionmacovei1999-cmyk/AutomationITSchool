@@ -1,0 +1,20 @@
+<dataSets>
+    <dataSet_1>
+        <firstName>Ion</firstName>
+        <lastName>Macovei</lastName>
+        <age>26</age>
+        <email>test@yahoo.com</email>
+        <salary>10000</salary>
+        <departament>IOT Testing Team</departament>
+    </dataSet_1>
+
+    <dataSet_2>
+        <firstName>Ionut</firstName>
+        <lastName>Bejgu</lastName>
+        <age>28</age>
+        <email>test2@yahoo.com</email>
+        <salary>50000</salary>
+        <departament>Testare</departament>
+    </dataSet_2>
+</dataSets>
+

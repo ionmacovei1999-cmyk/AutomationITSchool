@@ -1,4 +1,4 @@
-package TestsRefactor;
+package Tests.TestsRefactor;
 
 import Pages.CommonPage;
 import Pages.FramesTestPage;

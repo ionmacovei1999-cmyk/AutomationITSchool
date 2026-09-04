@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="SmokeSuite" parallel="classes" thread-count="4">
+
+    <test name="Smoke Tests">
+        <classes>
+            <class name = "Tests.TestsRefactor.WebTableTestV2"></class>
+            <class name = "Tests.TestsRefactor.AlertTestV2"></class>
+        </classes>
+    </test>
+
+</suite>
