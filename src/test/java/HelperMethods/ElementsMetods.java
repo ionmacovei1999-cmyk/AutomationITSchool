@@ -40,8 +40,7 @@ public class ElementsMetods {
         }
     }
 
-    public void enterText(WebElement element, String text)
-    {
+    public void enterText(WebElement element, String text) {
         waitVisibility(element);
         element.clear();//sterge text din field
         element.sendKeys(text);

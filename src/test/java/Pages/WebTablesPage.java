@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementsMetods;
+import Logger.LoggerUtility;
 import ObjectData.WebTableObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -66,12 +67,19 @@ public class WebTablesPage {
     public void addEntry(WebTableObject data)
     {
         clickOnAddButton();
+        LoggerUtility.infoTestCase("User clicked on add Button");
         enterFirstName(data.getFirstName());
+        LoggerUtility.infoTestCase("User entered First Name");
         enterLasttName(data.getLastName());
+        LoggerUtility.infoTestCase("User entered Last Name");
         enterUserEmail(data.getEmail());
+        LoggerUtility.infoTestCase("User entered Email");
         enterAge(data.getAge());
+        LoggerUtility.infoTestCase("User entered Age");
         enterSalary(data.getSalary());
+        LoggerUtility.infoTestCase("User entered Salary");
         enterDepartment(data.getDepartment());
+        LoggerUtility.infoTestCase("User entered Department");
         clickOnSubmitButton();
     }
 
@@ -118,11 +126,17 @@ public class WebTablesPage {
     public void verifyEntry(WebTableObject data)
     {
         Assert.assertTrue(firstNametColumn.getText().equals(data.getFirstName()));
+        LoggerUtility.infoTestCase("User verified First Name");
         Assert.assertTrue(lastNameColumn.getText().equals(data.getLastName()));
+        LoggerUtility.infoTestCase("User verified Last Name");
         Assert.assertTrue(emailColumn.getText().equals(data.getEmail()),"E-mailul nu a fost corect");
+        LoggerUtility.infoTestCase("User verified Email");
         Assert.assertTrue(ageColumn.getText().equals(data.getAge()));
+        LoggerUtility.infoTestCase("User verified Age");
         Assert.assertTrue(salaryColumn.getText().equals(data.getSalary()));
+        LoggerUtility.infoTestCase("User verified Salary");
         Assert.assertTrue(departmentColumn.getText().equals(data.getDepartment()));
+        LoggerUtility.infoTestCase("User verified Department");
     }
 
 

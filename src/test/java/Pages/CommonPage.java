@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementsMetods;
+import Logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,5 +26,6 @@ public class CommonPage {
     public void clickOnSubMenu(String text)
     {
         elementsMetods.selectElementFromListByText(elements,text);
+        LoggerUtility.infoTestCase("The User click on " + text + "submenu");
     }
 }

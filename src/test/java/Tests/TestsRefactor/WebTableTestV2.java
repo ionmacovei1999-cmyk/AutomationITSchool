@@ -7,15 +7,18 @@ import Pages.HomePage;
 import Pages.WebTablesPage;
 import Shared_Data.TestBasePage;
 import XmlReader.XmlDataLoader;
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
+@Listeners(ChainTestListener.class)
 public class WebTableTestV2 extends TestBasePage {
 
     private Map<String, WebTableObject> webTableObjectMap;
@@ -45,19 +48,26 @@ public class WebTableTestV2 extends TestBasePage {
         HomePage homePage = new HomePage(getDriver());
         homePage.clickElements();
 
+        ChainTestListener.log("The user clicked on homepage");
+
         Thread.sleep(2000);
 
 
         CommonPage commonPage = new CommonPage(getDriver());
         commonPage.clickOnSubMenu("Web Tables");
 
+        ChainTestListener.log("The user clicked on submenu");
+
         Thread.sleep(2000);
 
 
         WebTablesPage webTablesPage = new WebTablesPage(getDriver());
 
+        ChainTestListener.log("The user click on Webtable");
+
 //        webTablesPage.addEntry(firstName, lastName, email, age, salary, department);
         webTablesPage.addEntry(data);
+        ChainTestListener.log("The user added an full entry");
 
         WebElement rowAdded = getDriver().findElement(By.xpath("(//tr)[5]"));
         String rowAddedText = rowAdded.getText();
@@ -65,6 +75,7 @@ public class WebTableTestV2 extends TestBasePage {
 
 
         webTablesPage.verifyEntry(data);
+        ChainTestListener.log("All entries are verified");
 
     }
 }

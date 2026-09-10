@@ -1,0 +1,16 @@
+<dataSets>
+    <dataSet_1>
+        <firstName>Marinescu</firstName>
+        <lastName>Adrian</lastName>
+        <emailAddress>test@gmail.com</emailAddress>
+        <phoneNumber>0730500500</phoneNumber>
+        <Year>2025</Year>
+        <Month>07</Month>
+        <Day>14</Day>
+        <Subjects>I am a Human</Subjects>
+        <Hobies>Sports</Hobies>
+        <Current>dada</Current>
+        <State>Haryana</State>
+        <City>Karnal</City>
+    </dataSet_1>
+</dataSets>

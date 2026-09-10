@@ -4,11 +4,14 @@ import Pages.AlertsPage;
 import Pages.CommonPage;
 import Pages.HomePage;
 import Shared_Data.TestBasePage;
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(ChainTestListener.class)
 public class AlertTestV2 extends TestBasePage {
 
 
