@@ -1,5 +1,7 @@
 package ObjectData;
 
+import java.util.List;
+
 public class PracticeFormObject {
 
     private String firstName;
@@ -8,8 +10,9 @@ public class PracticeFormObject {
     private String phoneNumber;
     private String Year;
     private String Month;
+    private String Day;
     private String Subjects;
-    private String Hobies;
+    private List<String> Hobbies;
     private String Current;
     private String State;
     private String City;
@@ -43,8 +46,8 @@ public class PracticeFormObject {
         return Subjects;
     }
 
-    public String getHobies() {
-        return Hobies;
+    public List<String> getHobbies() {
+        return Hobbies;
     }
 
     public String getCurrent() {
@@ -61,5 +64,9 @@ public class PracticeFormObject {
 
     public String getGender() {
         return gender;
+    }
+
+    public String getDay() {
+        return Day;
     }
 }

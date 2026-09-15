@@ -31,9 +31,10 @@ public class PracticeFormTest extends TestBasePage {
 
         PracticeFormPage practiceFormPage = new PracticeFormPage(getDriver());
         practiceFormPage.completeFirstRegionField(data);
-
-
-
-
+        practiceFormPage.completeGender(data);
+        practiceFormPage.uploadPicture();
+        practiceFormPage.completeStatesAndCity(data);
+        practiceFormPage.completeHobbies(data);
+        practiceFormPage.completeCalendar(data);
     }
 }
