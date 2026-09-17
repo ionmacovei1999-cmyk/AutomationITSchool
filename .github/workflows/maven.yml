@@ -1,0 +1,52 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Automation ITSchool
+
+on:
+  workflow_dispatch: 
+    inputs:
+      suite:
+        description: 'chose automation suite RegresionSuite, SmokeSuite'
+        required: true
+        default: SmokeSuite
+      browser:
+        description: 'chose browser: chrome, edge '
+        required: true
+        default: chrome
+ 
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        server-id: github
+        setings-path: ${{ github.workspace }}
+        
+    - name: Run Automation Suite
+      run: mvn clean install -Dci_cd=true -Dbrowser=${{github.event.inputs.browser}} -DsuiteXmlFile=Suites/${{github.event.inputs.suite}} -PCustomSuite
+      
+    - name: Publish Test Results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Run results
+        path: |
+          target/chaintest
+          target/logs
+          
+      
+      
+
