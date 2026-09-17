@@ -2,6 +2,7 @@ package Pages;
 
 import HelperMethods.ElementsMetods;
 import ObjectData.TextBoxObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -96,7 +97,9 @@ public class Text_Box_Page {
     }
 
     public void submitButtonClick() {
-        elementsMethods.clickOnElement(submitButton);
+        //elementsMethods.clickOnElement(submitButton);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", submitButton);
 
     }
 
