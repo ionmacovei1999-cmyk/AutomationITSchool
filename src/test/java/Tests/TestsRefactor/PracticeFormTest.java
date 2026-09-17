@@ -36,5 +36,6 @@ public class PracticeFormTest extends TestBasePage {
         practiceFormPage.completeStatesAndCity(data);
         practiceFormPage.completeHobbies(data);
         practiceFormPage.completeCalendar(data);
+        practiceFormPage.submit();
     }
 }

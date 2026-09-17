@@ -133,8 +133,13 @@ public class PracticeFormPage {
         elementsMetods.selectByText(monthSelect,data.getMonth());
         elementsMetods.selectByValue(yearSelect,data.getYear());
 
-        WebElement day = driver.findElement(By.xpath("//div[@class='react-datepicker__day react-datepicker__day--0" + data.getDay() + "']"));
+        WebElement day = driver.findElement(By.xpath("//div[@class='react-datepicker__day react-datepicker__day--0" + data.getDay() + "' and not(contains(@class, 'react-datepicker__day--outside-month'))]"));
         elementsMetods.clickOnElement(day);
+    }
+
+    public void submit()
+    {
+        submitButton.submit();
     }
 
 }
