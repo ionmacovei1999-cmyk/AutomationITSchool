@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementsMetods;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +30,12 @@ public class HomePage {
     public void clickElements()
     {
        elementsMetods.clickOnElement(elementsButton);
+    }
+
+    public void clickElementsWithJavaScripts()
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", elementsButton);
     }
 
     public void clickForms()

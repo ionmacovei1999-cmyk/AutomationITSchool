@@ -23,7 +23,7 @@ public class TestBoxTestV3 extends TestBasePage {
         TextBoxObject data = textBoxObjectMap.get("dataSet_1");
 
         HomePage homePage = new HomePage(getDriver());
-        homePage.clickElements();
+        homePage.clickElementsWithJavaScripts();
 
         Thread.sleep(2000);
 
