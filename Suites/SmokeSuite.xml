@@ -6,7 +6,6 @@
     <test name="Smoke Tests">
         <classes>
             <class name = "Tests.TestsRefactor.WebTableTestV2"></class>
-            <class name = "Tests.TestsRefactor.AlertTestV2"></class>
         </classes>
     </test>
 

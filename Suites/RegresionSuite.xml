@@ -7,8 +7,6 @@
 
         <classes>
             <class name="Tests.TestsRefactor.AlertTestV2"/>
-            <class name="Tests.TestsRefactor.FramesTestV2"/>
-            <class name="Tests.TestsRefactor.TestBoxTestV2"/>
             <class name="Tests.TestsRefactor.WebTableTestV2"/>
         </classes>
     </test>

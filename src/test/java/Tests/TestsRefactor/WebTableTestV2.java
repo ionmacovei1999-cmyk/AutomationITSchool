@@ -26,7 +26,7 @@ public class WebTableTestV2 extends TestBasePage {
     @Test
     public void metodaTest() throws InterruptedException {
 
-        webTableObjectMap = XmlDataLoader.loadData("C:\\Users\\Lenovo\\Downloads\\project\\AutomationITSchool\\src\\test\\resources\\WebTableData.xml", WebTableObject.class);
+        webTableObjectMap = XmlDataLoader.loadData("src/test/resources/WebTableData.xml", WebTableObject.class);
         WebTableObject data = webTableObjectMap.get("dataSet_2");
 //        ChromeOptions options = new ChromeOptions();
 

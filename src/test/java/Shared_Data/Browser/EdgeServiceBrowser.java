@@ -23,6 +23,12 @@ public class EdgeServiceBrowser implements  IBrowserService{
         options.addArguments("--disable-gpu");
         options.addArguments("start-maximized");
         options.addArguments("no-sandbox");
+        String ciCd = System.getProperty("ci_cd");
+
+        if(Boolean.parseBoolean(ciCd))
+        {
+            options.addArguments("--headless");
+        }
         return options;
     }
 
