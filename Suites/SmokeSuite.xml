@@ -5,7 +5,7 @@
 
     <test name="Smoke Tests">
         <classes>
-            <class name = "Tests.TestsRefactor.AlertTestV2"></class>
+            <class name = "Tests.TestsRefactor.TestBoxTestV3"></class>
         </classes>
     </test>
 

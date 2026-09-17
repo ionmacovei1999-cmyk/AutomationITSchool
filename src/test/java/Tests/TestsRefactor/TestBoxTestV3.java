@@ -19,7 +19,7 @@ public class TestBoxTestV3 extends TestBasePage {
     @Test
     public void metodaTest() throws InterruptedException {
 
-        textBoxObjectMap = XmlDataLoader.loadData("C:\\Users\\Lenovo\\Downloads\\project\\AutomationITSchool\\src\\test\\resources\\TextBoxData.xml", TextBoxObject.class);
+        textBoxObjectMap = XmlDataLoader.loadData("src/test/resources/TextBoxData.xml", TextBoxObject.class);
         TextBoxObject data = textBoxObjectMap.get("dataSet_1");
 
         HomePage homePage = new HomePage(getDriver());
