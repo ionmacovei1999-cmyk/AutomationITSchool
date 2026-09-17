@@ -33,7 +33,7 @@ jobs:
         java-version: '23'
         distribution: 'temurin'
         server-id: github
-        setings-path: ${{ github.workspace }}
+        settings-path: ${{ github.workspace }}
         
     - name: Run Automation Suite
       run: mvn clean install -Dci_cd=true -Dbrowser=${{github.event.inputs.browser}} -DsuiteXmlFile=Suites/${{github.event.inputs.suite}} -PCustomSuite
